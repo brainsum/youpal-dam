@@ -1,0 +1,16 @@
+uuid: 57b11b72-c13d-4657-904f-cec016831e18
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.dam
+  module:
+    - user
+_core:
+  default_config_hash: M-nb7Q84HY49r30cJr-ugzjOAegcF0Cf9BjjLK3rDJk
+id: user_add_role_action.dam
+label: 'Add the DAM role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: dam

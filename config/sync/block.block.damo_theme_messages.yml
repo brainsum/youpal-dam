@@ -1,0 +1,22 @@
+uuid: bfe4d252-4da6-4ffa-ba4f-7e880ea021ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - damo_theme
+_core:
+  default_config_hash: gdLtzBVfavcdFNCgj8EISOldagughcbcf6_-gXhfFO0
+id: damo_theme_messages
+theme: damo_theme
+region: highlighted
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

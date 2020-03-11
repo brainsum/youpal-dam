@@ -1,0 +1,16 @@
+uuid: 9f332c3c-b8a7-4c5f-b372-a4f39ee99e7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.media_api
+  module:
+    - user
+_core:
+  default_config_hash: rCQVyl-akf6fWb-FqczZF1ccNCVUDr4ipR2S7VycSWA
+id: user_add_role_action.media_api
+label: 'Add the Media API role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: media_api

@@ -1,0 +1,15 @@
+uuid: fe036d4a-9a57-4e82-aae7-fe8c665c0dd1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1W3g0SpFo4XoINYmS3mj4YpOsOQoTFdgJE_JEcfXIiE
+id: dam
+label: DAM
+weight: 2
+is_admin: null
+permissions:
+  - 'view any published media'
+  - 'view media'
+  - 'view shared media collection entities'
+  - 'view shared media collection item entities'

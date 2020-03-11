@@ -1,0 +1,29 @@
+uuid: 912ef59d-c788-42a5-9cfd-c09152033293
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_file
+    - media.type.icon
+  module:
+    - file
+_core:
+  default_config_hash: vrL1klJLHWIuw92PS9kbvC12kcpMAHC87UZpm0Z8UuM
+id: media.icon.field_file
+field_name: field_file
+entity_type: media
+bundle: icon
+label: File
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'ai svg eps'
+  max_filesize: '50 MB'
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,21 @@
+uuid: d9156cc1-2364-409f-b9ab-0c23a96f32bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_gps_gpslongitude
+    - media.type.image
+_core:
+  default_config_hash: I2N9fVyETdm-XnrhFB59faw6rI9ns9be5KDw79UIwk0
+id: media.image.field_gps_gpslongitude
+field_name: field_gps_gpslongitude
+entity_type: media
+bundle: image
+label: 'GPS longitude'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

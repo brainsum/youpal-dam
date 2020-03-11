@@ -1,0 +1,12 @@
+uuid: 7fa15bec-3839-49ac-85f7-f3f26f78f592
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: RsQUUMEsrm_ZUtJf6vKtknxBy36pssHEheMfwj5LHcA
+id: media.shared_collection_item
+label: 'Shared collection item'
+targetEntityType: media
+cache: true

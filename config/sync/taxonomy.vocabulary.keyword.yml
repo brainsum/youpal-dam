@@ -1,0 +1,10 @@
+uuid: b633bbd5-6f88-45f8-b4c6-a03cf92cd23b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ntepDgCKddtnHhGqXg4vGspHiMHiP4LK9pmrnXJxLNc
+name: Keyword
+vid: keyword
+description: 'Keyword meta tag.'
+weight: 0

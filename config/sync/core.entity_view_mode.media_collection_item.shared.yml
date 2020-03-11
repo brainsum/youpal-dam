@@ -1,0 +1,12 @@
+uuid: 7a46f489-d449-411b-9b3d-efa29796df5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_collection
+_core:
+  default_config_hash: rkTEmPB-0JjkU_R4YxEmdT4-FtS4SI8i-nI_axctPx8
+id: media_collection_item.shared
+label: Shared
+targetEntityType: media_collection_item
+cache: true

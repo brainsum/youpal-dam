@@ -1,0 +1,27 @@
+uuid: 53abc6c5-e3aa-4330-9b97-e58f5fd6d342
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: XD0KB8Eh0O2_AFAYueDn6hW1yfEFLOgDJX5ofSAO23I
+id: keyword_contributor
+label: 'Keyword contributor'
+weight: 3
+is_admin: null
+permissions:
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'add terms in category'
+  - 'add terms in keyword'
+  - 'edit terms in category'
+  - 'edit terms in keyword'
+  - 'publish any media'
+  - 'unpublish any media'
+  - 'update any media'
+  - 'update media'
+  - 'view any published media'
+  - 'view media'
+  - 'view shared media collection entities'
+  - 'view shared media collection item entities'
+  - 'view terms in category'
+  - 'view terms in keyword'

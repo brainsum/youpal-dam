@@ -1,0 +1,21 @@
+uuid: 9fb65ed1-1d9c-43f4-bbb8-032b2cb755b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_gps_gpslatitude
+    - media.type.image
+_core:
+  default_config_hash: GFCQwAz6w7RL1BXnS1EorEzHo6aOPLFJ8-SoNfkvsbo
+id: media.image.field_gps_gpslatitude
+field_name: field_gps_gpslatitude
+entity_type: media
+bundle: image
+label: 'GPS latitude'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

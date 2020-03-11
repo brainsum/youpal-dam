@@ -1,0 +1,30 @@
+uuid: b9b58ccb-d4ae-4c1e-9d8d-698d9893c7f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_keywords
+    - media.type.image
+    - taxonomy.vocabulary.keyword
+_core:
+  default_config_hash: ZQ05Y0Yy9n79n_dV7-5LjCwK7-CVRccfaxX-C7PyWBw
+id: media.image.field_keywords
+field_name: field_keywords
+entity_type: media
+bundle: image
+label: Keywords
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      keyword: keyword
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

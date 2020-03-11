@@ -1,0 +1,13 @@
+uuid: f146037d-1bf3-4df5-ab60-c74406b5de7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.keyword
+_core:
+  default_config_hash: OLCFPAZqPQSUNglvrFwkwNsQMkTIi5XR-2nBBsqZ6T4
+id: taxonomy_term.keyword
+target_entity_type_id: taxonomy_term
+target_bundle: keyword
+default_langcode: site_default
+language_alterable: false
