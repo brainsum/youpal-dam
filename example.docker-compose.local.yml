@@ -1,0 +1,18 @@
+version: "2.4"
+
+services:
+  nginx:
+    environment:
+      NGINX_CLIENT_MAX_BODY_SIZE: "500m"
+      NGINX_TRACK_UPLOADS: "uploads 60s"
+      NGINX_UPLOAD_PROGRESS: "uploads 500m"
+
+  php:
+    environment:
+      PHP_POST_MAX_SIZE: "500M"
+      PHP_UPLOAD_MAX_FILESIZE: "500M"
+
+  traefik:
+    ports:
+      - '8000:80'
+    #  - '8080:8080' # Dashboard
