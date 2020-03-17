@@ -10,153 +10,153 @@ name: 'youpal-dam'
 type: 'php:7.3'
 
 variables:
-    php:
-        memory_limit: 512M
-        post_max_size: 500M
-        upload_max_filesize: 500M
-        opcache.memory_consumption: 128
+  php:
+    memory_limit: 512M
+    post_max_size: 500M
+    upload_max_filesize: 500M
+    opcache.memory_consumption: 128
 # The relationships of the application with services or other applications.
 #
 # The left-hand side is the name of the relationship as it will be exposed
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
-    database: 'db:mysql'
-# Uncomment this line to enable Redis caching for Drupal.
-    redis: 'cache:redis'
+  database: 'db:mysql'
+  # Uncomment this line to enable Redis caching for Drupal.
+  redis: 'cache:redis'
 
 # Add additional PHP extensions.
 runtime:
-    extensions:
-        - redis
+  extensions:
+    - redis
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
 
 # The 'mounts' describe writable, persistent filesystem mounts in the application.
 mounts:
-    '/web/sites/default/files':
-        source: local
-        source_path: 'files'
-    '/tmp':
-        source: local
-        source_path: 'tmp'
-    '/private':
-        source: local
-        source_path: 'private'
-    '/.drush':
-        source: local
-        source_path: 'drush'
-    '/drush-backups':
-        source: local
-        source_path: 'drush-backups'
-    '/.console':
-        source: local
-        source_path: 'console'
+  '/web/sites/default/files':
+    source: local
+    source_path: 'files'
+  '/tmp':
+    source: local
+    source_path: 'tmp'
+  '/private':
+    source: local
+    source_path: 'private'
+  '/.drush':
+    source: local
+    source_path: 'drush'
+  '/drush-backups':
+    source: local
+    source_path: 'drush-backups'
+  '/.console':
+    source: local
+    source_path: 'console'
 
 # Configuration of the build of this application.
 build:
-    flavor: composer
+  flavor: composer
 
 dependencies:
-    php:
-        hirak/prestissimo: '^0.3'
+  php:
+    hirak/prestissimo: '^0.3'
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
-    # @todo: Add `bash tools/generate-oauth-keys.sh` to a hook where the private mount is available.
-    # Code only stuff.
-    build: |
-        set -e
-        composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
-    # The deploy hook runs after your application has been deployed and started; mounts are read-only.
-    deploy: |
-        set -e
-        php ./drush/platformsh_generate_drush_yml.php
-        cd web
-        drush -y updatedb
-        drush -y cache-rebuild
-        drush -y config-import
-        drush -y cron
-    post_deploy: |
-        set -e
-        drush cr
+  # @todo: Add `bash tools/generate-oauth-keys.sh` to a hook where the private mount is available.
+  # Code only stuff.
+  build: |
+    set -e
+    composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
+  # The deploy hook runs after your application has been deployed and started; mounts are read-only.
+  deploy: |
+    set -e
+    php ./drush/platformsh_generate_drush_yml.php
+    cd web
+    drush -y updatedb
+    drush -y cache-rebuild
+    drush -y config-import
+    drush -y cron
+  post_deploy: |
+    set -e
+    drush cr
 
 # The configuration of app when it is exposed to the web.
 web:
-    # Specific parameters for different URL prefixes.
-    locations:
-        '/':
-            # The folder from which to serve static assets, for this location.
-            #
-            # This is a filesystem path, relative to the application root.
-            root: '/web'
+  # Specific parameters for different URL prefixes.
+  locations:
+    '/':
+      # The folder from which to serve static assets, for this location.
+      #
+      # This is a filesystem path, relative to the application root.
+      root: 'web'
 
-            # How long to allow static assets from this location to be cached.
-            #
-            # Can be a time in seconds, or -1 for no caching. Times can be
-            # suffixed with "s" (seconds), "m" (minutes), "h" (hours), "d"
-            # (days), "w" (weeks), "M" (months, as 30 days) or "y" (years, as
-            # 365 days).
-            expires: 5m
+      # How long to allow static assets from this location to be cached.
+      #
+      # Can be a time in seconds, or -1 for no caching. Times can be
+      # suffixed with "s" (seconds), "m" (minutes), "h" (hours), "d"
+      # (days), "w" (weeks), "M" (months, as 30 days) or "y" (years, as
+      # 365 days).
+      expires: 5m
 
-            # Whether to forward disallowed and missing resources from this
-            # location to the application.
-            #
-            # Can be true, false or a URI path string.
-            passthru: '/index.php'
+      # Whether to forward disallowed and missing resources from this
+      # location to the application.
+      #
+      # Can be true, false or a URI path string.
+      passthru: '/index.php'
 
-            # Deny access to static files in this location.
-            allow: false
+      # Deny access to static files in this location.
+      allow: false
 
-            # Rules for specific URI patterns.
-            rules:
-                # Allow access to common static files.
-                '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
-                    allow: true
-                '^/robots\.txt$':
-                    allow: true
-                '^/sitemap\.xml$':
-                    allow: true
+      # Rules for specific URI patterns.
+      rules:
+        # Allow access to common static files.
+        '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
+          allow: true
+        '^/robots\.txt$':
+          allow: true
+        '^/sitemap\.xml$':
+          allow: true
 
-                # Deny direct access to configuration files.
-                '^/sites/sites\.php$':
-                    scripts: false
-                '^/sites/[^/]+/settings.*?\.php$':
-                    scripts: false
+        # Deny direct access to configuration files.
+        '^/sites/sites\.php$':
+          scripts: false
+        '^/sites/[^/]+/settings.*?\.php$':
+          scripts: false
 
-        '/sites/default/files':
-            # Allow access to all files in the public files directory.
-            allow: true
-            expires: 5m
-            passthru: '/index.php'
-            root: '/web/sites/default/files'
+    '/sites/default/files':
+      # Allow access to all files in the public files directory.
+      allow: true
+      expires: 5m
+      passthru: '/index.php'
+      root: 'web/sites/default/files'
 
-            # Do not execute PHP scripts.
-            scripts: false
+      # Do not execute PHP scripts.
+      scripts: false
 
-            rules:
-                # Provide a longer TTL (2 weeks) for aggregated CSS and JS files.
-                '^/sites/default/files/(css|js)':
-                    expires: 2w
+      rules:
+        # Provide a longer TTL (2 weeks) for aggregated CSS and JS files.
+        '^/sites/default/files/(css|js)':
+          expires: 2w
 
 # The configuration of scheduled execution.
 crons:
-    drupal:
-        spec: '*/20 * * * *'
-        cmd: 'drush core-cron'
+  drupal:
+    spec: '*/20 * * * *'
+    cmd: 'drush core-cron'
 
-    backup:
-        # Take a backup automatically every night at 3 am (UTC).
-        spec: '0 3 * * *'
-        cmd: |
-            if [ "$PLATFORM_BRANCH" = master ]; then
-                platform backup:create --yes --no-wait
-            fi
-    renewcert:
-        # Force a redeploy at 8 am (UTC) on the 14th and 28th of every month.
-        spec: '0 8 14,28 * *'
-        cmd: |
-            if [ "$PLATFORM_BRANCH" = master ]; then
-                platform redeploy --yes --no-wait
-            fi
+  backup:
+    # Take a backup automatically every night at 3 am (UTC).
+    spec: '0 3 * * *'
+    cmd: |
+      if [ "$PLATFORM_BRANCH" = master ]; then
+          platform backup:create --yes --no-wait
+      fi
+  renewcert:
+    # Force a redeploy at 8 am (UTC) on the 14th and 28th of every month.
+    spec: '0 8 14,28 * *'
+    cmd: |
+      if [ "$PLATFORM_BRANCH" = master ]; then
+          platform redeploy --yes --no-wait
+      fi
