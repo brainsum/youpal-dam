@@ -1,6 +1,6 @@
 {
-    "name": "brainsum/exeger_dam",
-    "description": "Exeger DAM project based on the DAMO distro.",
+    "name": "brainsum/youpal_dam",
+    "description": "Youpal DAM project based on the DAMO distro.",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -34,13 +34,16 @@
     },
     "require": {
         "php": "^7.3",
+        "ext-PDO": "*",
         "brainsum/damo-distribution": ">=0.5 <1.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
+        "drupal/redis": "^1.4",
         "drush/drush": "^9.0|^10.0",
         "oomphinc/composer-installers-extender": "^1.1",
+        "platformsh/config-reader": "^2.3",
         "vlucas/phpdotenv": "^2.4"
     },
     "require-dev": {
@@ -74,7 +77,6 @@
                 "[web-root]/sites/default/default.settings.php": {
                     "append": "assets/settings_include_damo.txt"
                 },
-                "[web-root]/sites/damo.settings.php": "assets/damo.settings.php",
                 "[web-root]/sites/docker.settings.php": "assets/docker.settings.php"
             }
         },
