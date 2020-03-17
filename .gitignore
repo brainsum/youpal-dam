@@ -45,3 +45,7 @@ web/sites/*.dd
 
 docker-compose.local.yml
 /drush/drush.yml
+
+.auth
+.platform/local
+tmp

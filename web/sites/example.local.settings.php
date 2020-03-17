@@ -30,5 +30,11 @@ $config['ip_auth.settings']['ip_auth'] = [];
 $config['ldap_authentication.settings']['ldap_authentication_conf']['ssoExcludedPaths'][] = '/user/login';
 
 $settings['trusted_host_patterns'] = [
-  '^exeger\-dam\.docker\.localhost$',
+  '^youpal\-dam\.docker\.localhost$',
 ];
+
+$settings['file_public_path'] = 'sites/default/files';
+// Stuff outside the webroot.
+$settings['file_temp_path'] = '../tmp';
+$settings['file_private_path'] = '../private_files';
+$settings['config_sync_directory'] = '../config/sync';
