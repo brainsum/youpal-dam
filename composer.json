@@ -33,7 +33,7 @@
         }
     },
     "require": {
-        "php": "^7.3",
+        "php": "^7.4",
         "ext-PDO": "*",
         "brainsum/damo-distribution": ">=0.5 <1.0",
         "composer/installers": "^1.2",
