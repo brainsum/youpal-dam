@@ -27,18 +27,18 @@ tooltip_placement: 'auto top'
 tooltip_selector: '[data-toggle="tooltip"]'
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: '/themes/contrib/damo_theme/favicon.ico'
-  use_default: true
+  path: assets/favicon.ico
+  url: '/assets/favicon.ico'
+  use_default: false
 schemas:
   bootstrap: 8000
   damo_theme: 8000
 _core:
   default_config_hash: pw-6p9YW9pI9ct8pnT7wXyNB0bjK1y-wjmKq7yh3ZrU
 logo:
-  path: 'private://brainsum-dam-logo-small.png'
+  path: assets/logo_youpal_reduced.png
   url: ''
-  use_default: true
+  use_default: false
 cdn_theme: ''
 cdn_cache_ttl_versions: 0
 cdn_cache_ttl_themes: 0
