@@ -56,7 +56,11 @@
     "extra": {
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
-        "patches": {},
+        "patches": {
+            "brainsum/damo_theme": {
+                "Replace logo paths.": "patches/damo-theme.logo-replace.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
