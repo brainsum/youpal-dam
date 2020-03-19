@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23c730aaee5a6b68300cb16230b891b9",
+    "content-hash": "6d0ef92e330a212fe0e77bc9d0fab705",
     "packages": [
         {
             "name": "alchemy/binary-driver",
@@ -285,6 +285,46 @@
             ],
             "description": "Theme for brainsum DAMo project.",
             "time": "2020-03-06T08:39:59+00:00"
+        },
+        {
+            "name": "brainsum/dropzone",
+            "version": "v5.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brainsum/dropzone.git",
+                "reference": "f0e1bba82d9717f8f37435fd85ea3d553721b463"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brainsum/dropzone/zipball/f0e1bba82d9717f8f37435fd85ea3d553721b463",
+                "reference": "f0e1bba82d9717f8f37435fd85ea3d553721b463",
+                "shasum": ""
+            },
+            "replace": {
+                "enyo-drupal/dropzone": "*",
+                "enyo/dropzone": "*"
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matias Meno",
+                    "email": "m@tias.me",
+                    "homepage": "http://www.matiasmeno.com"
+                }
+            ],
+            "description": "Handles drag and drop of files for you.",
+            "homepage": "http://www.dropzonejs.com",
+            "keywords": [
+                "drag and drop",
+                "dragndrop",
+                "file upload",
+                "upload"
+            ],
+            "time": "2020-03-19T10:29:18+00:00"
         },
         {
             "name": "brainsum/jquery_ui_datepicker",
@@ -4877,15 +4917,6 @@
                 "validator"
             ],
             "time": "2019-08-13T17:33:27+00:00"
-        },
-        {
-            "name": "enyo-drupal/dropzone",
-            "version": "v4.3.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/enyo/dropzone/archive/v4.3.0.zip"
-            },
-            "type": "drupal-library"
         },
         {
             "name": "evenement/evenement",
