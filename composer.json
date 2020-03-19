@@ -23,6 +23,7 @@
     "require": {
         "php": "^7.4",
         "ext-PDO": "*",
+        "ext-json": "*",
         "brainsum/damo-distribution": ">=0.5 <1.0",
         "brainsum/dropzone": "^5.7",
         "composer/installers": "^1.2",
