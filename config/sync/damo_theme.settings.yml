@@ -28,7 +28,7 @@ tooltip_selector: '[data-toggle="tooltip"]'
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: assets/favicon.ico
-  url: '/assets/favicon.ico'
+  url: /assets/favicon.ico
   use_default: false
 schemas:
   bootstrap: 8000
