@@ -31,6 +31,7 @@
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/redis": "^1.4",
+        "drupal/search_api_solr": "^3.9",
         "drush/drush": "^9.0|^10.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "platformsh/config-reader": "^2.3",
