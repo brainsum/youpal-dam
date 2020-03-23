@@ -122,16 +122,16 @@
         },
         {
             "name": "brainsum/damo-distribution",
-            "version": "0.15.3",
+            "version": "0.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damo-distribution.git",
-                "reference": "55d38c1ab66895b3dff4839f5cd14b9d56333766"
+                "reference": "b856aa9bb3881345ed0c55eb7a361522456c9572"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damo-distribution/zipball/55d38c1ab66895b3dff4839f5cd14b9d56333766",
-                "reference": "55d38c1ab66895b3dff4839f5cd14b9d56333766",
+                "url": "https://api.github.com/repos/brainsum/damo-distribution/zipball/b856aa9bb3881345ed0c55eb7a361522456c9572",
+                "reference": "b856aa9bb3881345ed0c55eb7a361522456c9572",
                 "shasum": ""
             },
             "require": {
@@ -161,6 +161,7 @@
                 "drupal/r4032login": "^1.1",
                 "drupal/redirect_after_login": "^2.5",
                 "drupal/search_api": "^1.15",
+                "drupal/search_api_solr": "^3.9",
                 "drupal/taxonomy_access_fix": "^2.7",
                 "drupal/term_merge": "^1.0",
                 "drupal/userprotect": "^1.1",
@@ -259,7 +260,7 @@
                 }
             ],
             "description": "Distribution for quickly starting a new Digital Media Assets Management system with Drupal",
-            "time": "2020-03-06T08:36:07+00:00"
+            "time": "2020-03-23T17:26:19+00:00"
         },
         {
             "name": "brainsum/damo_theme",
@@ -3341,20 +3342,20 @@
         },
         {
             "name": "drupal/focal_point",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/focal_point.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "b274a5f4484ce99dece492dc7ae7149b34982244"
+                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "f5b2ee49853fdcea7b4273a8c2d0c210be24de54"
             },
             "require": {
-                "drupal/core": "*",
+                "drupal/core": "^8 || ^9",
                 "drupal/crop": "*"
             },
             "require-dev": {
@@ -3366,8 +3367,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1569333485",
+                    "version": "8.x-1.3",
+                    "datestamp": "1584797652",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6281,16 +6282,16 @@
         },
         {
             "name": "php-ffmpeg/php-ffmpeg",
-            "version": "v0.14",
+            "version": "v0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-FFMpeg/PHP-FFMpeg.git",
-                "reference": "f9cc3d0c429fade5a144db674272eb8b48db8dce"
+                "reference": "984dbd046b6d8c285f9e7419fc7645f197513bfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-FFMpeg/PHP-FFMpeg/zipball/f9cc3d0c429fade5a144db674272eb8b48db8dce",
-                "reference": "f9cc3d0c429fade5a144db674272eb8b48db8dce",
+                "url": "https://api.github.com/repos/PHP-FFMpeg/PHP-FFMpeg/zipball/984dbd046b6d8c285f9e7419fc7645f197513bfa",
+                "reference": "984dbd046b6d8c285f9e7419fc7645f197513bfa",
                 "shasum": ""
             },
             "require": {
@@ -6301,9 +6302,9 @@
                 "php": "^5.3.9 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.36",
                 "sami/sami": "~1.0",
-                "silex/silex": "~1.0"
+                "silex/silex": "~1.0",
+                "symfony/phpunit-bridge": "^5.0.4"
             },
             "suggest": {
                 "php-ffmpeg/extras": "A compilation of common audio & video drivers for PHP-FFMpeg"
@@ -6361,7 +6362,7 @@
                 "video",
                 "video processing"
             ],
-            "time": "2019-02-26T17:04:09+00:00"
+            "time": "2020-03-23T09:32:09+00:00"
         },
         {
             "name": "platformsh/config-reader",
