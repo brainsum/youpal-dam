@@ -85,11 +85,16 @@ hooks:
     set -e
     php ./drush/platformsh_generate_drush_yml.php
     cd web
+    echo "Temporary step; enable damo_assets_solr."
+    drush en damo_assets_solr
     echo "DB update."
-    drush -y updatedb
+    drush updb -y
     echo "Config import."
-    drush -y config-import
-    drush -y cron
+    drush cim -y
+    echo "Cache clear."
+    drush cr -y
+    echo "Cron."
+    drush cron -y
   post_deploy: |
     set -e
     drush cr
