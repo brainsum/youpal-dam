@@ -175,3 +175,21 @@ $config['simple_oauth.settings']['private_key'] = $settings['file_private_path']
 $settings['container_yamls'][] = 'sites/default/services.platformsh.yml';
 // Allow mail sending; platfromsh controls this separately for each env.
 $config['maillog.settings']['send'] = TRUE;
+
+// Solr.
+if (
+  $platformsh->hasRelationship('solr')
+  && !InstallerKernel::installationAttempted()
+) {
+  $platformsh->registerFormatter('drupal-solr', static function ($solr) {
+    // Default the solr core name to `collection1` for pre-Solr-6.x instances.
+    return [
+      'core' => substr($solr['path'], 5) ? : 'default',
+      'path' => '',
+      'host' => $solr['host'],
+      'port' => $solr['port'],
+    ];
+  });
+
+  $config['search_api.server.solr']['backend_config']['connector_config'] = $platformsh->formattedCredentials('solr', 'drupal-solr');
+}
