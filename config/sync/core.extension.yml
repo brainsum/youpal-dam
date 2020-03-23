@@ -13,6 +13,7 @@ module:
   damo_assets_download: 0
   damo_assets_library: 0
   damo_assets_lister: 0
+  damo_assets_solr: 0
   damo_assets_statistics: 0
   damo_assets_thumbnails: 0
   damo_image_media_styles_preview: 0
