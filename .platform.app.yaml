@@ -85,8 +85,9 @@ hooks:
     set -e
     php ./drush/platformsh_generate_drush_yml.php
     cd web
+    echo "DB update."
     drush -y updatedb
-    drush -y cache-rebuild
+    echo "Config import."
     drush -y config-import
     drush -y cron
   post_deploy: |
