@@ -22,8 +22,8 @@ variables:
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
   database: 'db:mysql'
-  # Uncomment this line to enable Redis caching for Drupal.
   redis: 'cache:redis'
+  solr: 'search:main'
 
 # Add additional PHP extensions.
 #runtime:
