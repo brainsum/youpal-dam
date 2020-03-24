@@ -10,7 +10,7 @@ db:
 cache:
   type: redis:5.0
 
-search:
+solrsearch:
   type: solr:8.4
   disk: 1024
   configuration:
