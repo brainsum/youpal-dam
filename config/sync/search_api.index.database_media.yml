@@ -1,22 +1,61 @@
 uuid: a5f9a3bb-6e22-4d46-acb3-3a6b99d3ca07
 langcode: en
-status: true
+status: false
 dependencies:
   module:
+    - search_api_solr
     - media
     - file
     - taxonomy
     - search_api
   config:
-    - field.storage.media.field_category
     - field.storage.media.field_file
     - field.storage.media.field_files
     - field.storage.media.field_image
     - field.storage.media.field_images
+    - field.storage.media.field_category
     - field.storage.media.field_keywords
     - field.storage.media.field_template_file
     - field.storage.media.field_video_file
     - search_api.server.local_database_server
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
 _core:
   default_config_hash: Wlosw-jCcX5r5HAZ0ncgZUDJth7q5uvs0YUdopZ2WqA
 id: database_media
@@ -241,6 +280,7 @@ processor_settings:
       preprocess_query: -10
   language_with_fallback: {  }
   rendered_item: {  }
+  solr_date_range: {  }
   type_boost:
     boosts:
       'entity:media':
