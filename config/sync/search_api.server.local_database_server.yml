@@ -1,6 +1,6 @@
 uuid: 34fe6496-d06e-4521-88c8-fd52b17e95e9
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search_api_db
@@ -17,4 +17,3 @@ backend_config:
   autocomplete:
     suggest_suffix: true
     suggest_words: true
-enabled: false

@@ -1,3 +1,4 @@
+uuid: 61498f87-de81-4774-99be-55b4d949fe37
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,8 @@ dependencies:
     - better_exposed_filters
     - search_api
     - user
+_core:
+  default_config_hash: O_CBDS4RXNckvPLGzyQZMvLWIVp2WI-BnvgHCtQaaEY
 id: asset_search
 label: 'Asset search'
 module: views
@@ -552,6 +555,3 @@ display:
         - user
         - user.permissions
       tags: {  }
-uuid: 61498f87-de81-4774-99be-55b4d949fe37
-_core:
-  default_config_hash: O_CBDS4RXNckvPLGzyQZMvLWIVp2WI-BnvgHCtQaaEY
