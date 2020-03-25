@@ -15,7 +15,6 @@ module:
   damo_assets_lister: 0
   damo_assets_solr: 0
   damo_assets_statistics: 0
-  damo_assets_thumbnails: 0
   damo_image_media_styles_preview: 0
   datetime: 0
   dblog: 0
