@@ -122,16 +122,16 @@
         },
         {
             "name": "brainsum/damo-distribution",
-            "version": "0.16.3",
+            "version": "0.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damo-distribution.git",
-                "reference": "f8a7b7be2f029851f8c6a15f1edbcd06368307c8"
+                "reference": "44a79661ed3ed2bfaed8fe0ade2de4c66ac6f0e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damo-distribution/zipball/f8a7b7be2f029851f8c6a15f1edbcd06368307c8",
-                "reference": "f8a7b7be2f029851f8c6a15f1edbcd06368307c8",
+                "url": "https://api.github.com/repos/brainsum/damo-distribution/zipball/44a79661ed3ed2bfaed8fe0ade2de4c66ac6f0e9",
+                "reference": "44a79661ed3ed2bfaed8fe0ade2de4c66ac6f0e9",
                 "shasum": ""
             },
             "require": {
@@ -141,7 +141,7 @@
                 "drupal/adminimal_admin_toolbar": "^1.10",
                 "drupal/better_exposed_filters": "^4.0",
                 "drupal/better_formats": "1.x-dev",
-                "drupal/core": "^8.7",
+                "drupal/core": "^8.8",
                 "drupal/dropzonejs": "^2.0",
                 "drupal/entity_browser": "^2.3",
                 "drupal/entity_embed": "^1.0",
@@ -169,7 +169,8 @@
                 "enyo-drupal/dropzone": "^4.3",
                 "ext-json": "*",
                 "ext-zip": "*",
-                "php": "^7.2"
+                "php": "^7.3",
+                "symfony/event-dispatcher": "4.3.4 as 3.4.35"
             },
             "type": "drupal-profile",
             "extra": {
@@ -260,7 +261,7 @@
                 }
             ],
             "description": "Distribution for quickly starting a new Digital Media Assets Management system with Drupal",
-            "time": "2020-03-23T18:28:44+00:00"
+            "time": "2020-04-07T16:37:52+00:00"
         },
         {
             "name": "brainsum/damo_theme",
@@ -5446,6 +5447,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -5492,6 +5494,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
