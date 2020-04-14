@@ -1,18 +1,20 @@
-uuid: ecfc1246-21dd-45ea-97b7-fb2584d6edb3
+uuid: 866c2165-930b-4de1-b4a6-cd9e24f59459
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.database_media
+    - search_api.index.solr_media
   module:
     - search_api
     - user
+_core:
+  default_config_hash: JYwMbJPmgHwWNdqUk6giaiyL93K1eDS6iEV-9StwBiQ
 id: unpublished_assets
 label: 'Unpublished assets'
 module: views
 description: 'List of unpublished assets.'
 tag: ''
-base_table: search_api_index_database_media
+base_table: search_api_index_solr_media
 base_field: search_api_id
 display:
   default:
@@ -82,7 +84,7 @@ display:
               video_file: media_library
       fields:
         changed:
-          table: search_api_index_database_media
+          table: search_api_index_solr_media
           field: changed
           id: changed
           entity_type: null
@@ -158,7 +160,7 @@ display:
       filters:
         media_status:
           id: media_status
-          table: search_api_index_database_media
+          table: search_api_index_solr_media
           field: media_status
           relationship: none
           group_type: group
@@ -197,7 +199,7 @@ display:
       sorts:
         created:
           id: created
-          table: search_api_index_database_media
+          table: search_api_index_solr_media
           field: created
           relationship: none
           group_type: group
@@ -209,7 +211,7 @@ display:
           plugin_id: search_api
         media_name:
           id: media_name
-          table: search_api_index_database_media
+          table: search_api_index_solr_media
           field: media_name
           relationship: none
           group_type: group
@@ -248,7 +250,7 @@ display:
       arguments:
         author:
           id: author
-          table: search_api_index_database_media
+          table: search_api_index_solr_media
           field: author
           relationship: none
           group_type: group
@@ -290,7 +292,8 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:search_api.index.solr_media'
   unpublished_assets:
     display_plugin: page
     id: unpublished_assets
@@ -313,7 +316,8 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:search_api.index.solr_media'
   user_unpublished_assets:
     display_plugin: page
     id: user_unpublished_assets
@@ -338,7 +342,7 @@ display:
       relationships:
         uid:
           id: uid
-          table: search_api_datasource_database_media_entity_media
+          table: search_api_datasource_solr_media_entity_media
           field: uid
           relationship: none
           group_type: group
@@ -350,7 +354,7 @@ display:
       filters:
         media_status:
           id: media_status
-          table: search_api_index_database_media
+          table: search_api_index_solr_media
           field: media_status
           relationship: none
           group_type: group
@@ -393,7 +397,7 @@ display:
       arguments:
         author:
           id: author
-          table: search_api_index_database_media
+          table: search_api_index_solr_media
           field: author
           relationship: none
           group_type: group
@@ -433,4 +437,5 @@ display:
         - 'url.query_args:sort_order'
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:search_api.index.solr_media'
