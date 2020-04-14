@@ -62,15 +62,6 @@ dependencies:
   php:
     require:
       "hirak/prestissimo": '^0.3'
-    repositories:
-      - type: 'package'
-        package:
-          name: 'enyo-drupal/dropzone'
-          version: 'v4.3.0'
-          type: 'drupal-library'
-          dist:
-            url: 'https://github.com/enyo/dropzone/archive/v4.3.0.zip'
-            type: 'zip'
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
@@ -85,8 +76,6 @@ hooks:
     set -e
     php ./drush/platformsh_generate_drush_yml.php
     cd web
-    echo "Temporary step; enable damo_assets_solr."
-    drush en damo_assets_solr
     echo "DB update."
     drush updb -y
     echo "Config import."
