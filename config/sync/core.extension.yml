@@ -56,7 +56,6 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
-  php_ffmpeg: 0
   r4032login: 0
   redirect_after_login: 0
   rest: 0
