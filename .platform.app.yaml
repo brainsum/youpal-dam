@@ -69,6 +69,7 @@ hooks:
   # Code only stuff.
   build: |
     set -e
+    curl -sS https://platform.sh/cli/installer | php
     composer clear-cache
     composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
   # The deploy hook runs after your application has been deployed and started; mounts are read-only.
