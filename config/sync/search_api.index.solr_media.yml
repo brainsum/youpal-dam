@@ -157,10 +157,10 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
-  language_with_fallback: {  }
-  rendered_item: {  }
   add_url: {  }
   aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
   solr_date_range: {  }
 tracker_settings:
   default:
