@@ -6,6 +6,8 @@
 "https://{default}/":
   type: upstream
   upstream: "youpal-dam:http"
+  tls:
+    min_version: TLSv1.2
   cache:
     enabled: true
 
